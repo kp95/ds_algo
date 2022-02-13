@@ -22,7 +22,7 @@ public class QueueUser {
 		return this.size == 0;
 	}
 	
-	void enqueue(int data) {
+	public void enqueue(int data) {
 		if(!isFull()) {
 			this.rear = (this.rear + 1) % this.capacity;
 			this.arr[this.rear] = data;
@@ -31,7 +31,7 @@ public class QueueUser {
 		}
 	}
 	
-	int dequeue() {
+	public int dequeue() {
 		if(this.isEmpty()) {
 			return Integer.MIN_VALUE;
 		}
@@ -40,13 +40,13 @@ public class QueueUser {
 		this.size--;
 		return item;
 	}
-	int front() {
+	public int front() {
 		if(isEmpty()) {
 			return Integer.MIN_VALUE;
 		}
 		return this.arr[this.front];
 	}
-	int rear() {
+	public int rear() {
 		if(isEmpty()) {
 			return Integer.MIN_VALUE;
 		}

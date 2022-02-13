@@ -7,11 +7,11 @@ public class StackUser<T> {
 	ArrayList<T> stack = new ArrayList<T>();
 	
 	
-	void push(T data) {
+	public void push(T data) {
 		stack.add(data);
 	}
 	
-	T pop() {
+	public T pop() {
 		if(stack.size() == 0) {
 			System.err.println("UnderFlow");
 			return null;
@@ -22,16 +22,16 @@ public class StackUser<T> {
 		return res;
 	}
 
-	T peek() {
+	public T peek() {
 		T res = stack.get(stack.size()-1);
 		return res;
 	}
 	
-	int size() {
+	public int size() {
 		return stack.size();
 	}
 	
-	boolean isEmpty() {
+	public boolean isEmpty() {
 		return stack.isEmpty();
 	}
 	
